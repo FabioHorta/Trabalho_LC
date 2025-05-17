@@ -1,6 +1,6 @@
-# 🍽️ Sistema Pericial de Recomendação de Restaurantes
+# 🧠 Sistema Pericial para Recomendação de Restaurantes
 
-Este projeto é um **Sistema Pericial desenvolvido em Prolog** com o objetivo de recomendar restaurantes com base nas preferências do utilizador. Utiliza uma base de conhecimento gerada a partir de dados reais (CSV) e um motor de inferência simples, que interage com o utilizador para propor uma escolha adequada.
+Este projeto consiste num sistema pericial em **Prolog** que recomenda restaurantes com base em critérios dados pelo utilizador, como localização, preço, tipo de comida, dietas disponíveis, entre outros. A base de conhecimento é construída a partir de um ficheiro `.csv` com dados reais de restaurantes.
 
 ---
 
@@ -16,6 +16,7 @@ Trabalho_Pratico/
 └── README.md              # Este ficheiro
 
 
+
 ---
 
 ## ⚙️ Tecnologias Usadas
@@ -27,7 +28,8 @@ Trabalho_Pratico/
 ---
 
 ## 🚀 Como Correr o Sistema
-
+ swipl perito.pl
+ 
 ### 1. Gera a base de conhecimento
 
 
