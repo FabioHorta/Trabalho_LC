@@ -6,13 +6,14 @@ Este projeto é um **Sistema Pericial desenvolvido em Prolog** com o objetivo de
 
 ## 📁 Estrutura do Projeto
 
+```plaintext
 Trabalho_Pratico/
-├── base_conhecimento.pl # Fatos extraídos do CSV
-├── perito.pl # Sistema pericial (motor de inferência)
-├── test.pl # Base de conhecimento com regras e objetivo
-├── restaurantes.csv # Ficheiro original com dados dos restaurantes
-├── exportador.py # Script Python para gerar o base_conhecimento.pl
-└── README.md # Este ficheiro
+├── base_conhecimento.pl   # Fatos extraídos do CSV
+├── perito.pl              # Sistema pericial (motor de inferência)
+├── test.pl                # Base de conhecimento com regras e objetivo
+├── restaurantes.csv       # Ficheiro original com dados dos restaurantes
+├── exportador.py          # Script Python para gerar o base_conhecimento.pl
+└── README.md              # Este ficheiro
 
 
 ---
