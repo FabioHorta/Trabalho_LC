@@ -1,10 +1,10 @@
-```
+
 # 🧠 Sistema Pericial para Recomendação de Restaurantes
 
 Este projeto consiste num sistema pericial em **Prolog** que recomenda restaurantes com base em critérios dados pelo utilizador, como localização, preço, tipo de comida, dietas disponíveis, entre outros. A base de conhecimento é construída a partir de um ficheiro `.csv` com dados reais de restaurantes.
 
 ---
-
+```
 ## 📁 Estrutura do Projeto
 
 ```plaintext
@@ -17,7 +17,7 @@ Trabalho_Pratico/
 └── README.md              # Este ficheiro
 
 
-
+```
 ---
 
 ## ⚙️ Tecnologias Usadas
@@ -33,7 +33,7 @@ Trabalho_Pratico/
  
 ### 1. Gera a base de conhecimento
 
-
+```
 
 ?- consult(perito).
 ?- perito.
@@ -45,9 +45,10 @@ Consulta a base de conhecimento: test.
 Responde às perguntas com base nas tuas preferências
 
 O sistema recomendará um restaurante
-
+```
 
 📌 Funcionalidades
+```
 ✅ Perguntas adaptativas: só pergunta atributos relevantes
 
 ✅ Validação automática de inputs (cidades, tipos de comida, etc.)
@@ -57,12 +58,14 @@ O sistema recomendará um restaurante
 ✅ Suporte a grandes volumes de dados (via Git LFS)
 
 ✅ Suporte a múltiplas dietas, prémios, e estilos de cozinha
+```
 
-
+```
 restaurante('farol_da_esperanca', 'belmonte', 1, 4.0, ['portuguese', 'european'], ['vegetariano'], [], 'sim').
 localizacao('farol_da_esperanca', 39.676, -7.338).
-
+```
 🙋‍♂️ Autores
+```
 Fábio Horta
 Beatriz Patrício
-
+```
