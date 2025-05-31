@@ -1,5 +1,3 @@
-
-<<<<<<< HEAD
 # 🍽️ Sistema Pericial de Restaurantes
 
 Sistema desenvolvido em **Prolog** que permite ao utilizador procurar restaurantes com base em diversos critérios personalizados, incluindo localização, tipo de cozinha, orçamento, opções dietéticas e mais.
