@@ -1,140 +1,140 @@
-# 🍽️ Sistema Pericial de Restaurantes
+# 🍽️ Restaurant Expert System
 
-Sistema desenvolvido em **Prolog** que permite ao utilizador procurar restaurantes com base em diversos critérios personalizados, incluindo localização, tipo de cozinha, orçamento, opções dietéticas e mais.
-
----
-
-## 🎯 Objetivo
-
-Permitir a **pesquisa inteligente de restaurantes** com base em diferentes critérios definidos pelo utilizador, retornando o restaurante mais próximo que satisfaz as condições impostas.
+A system developed in **Prolog** that allows users to search for restaurants based on various personalized criteria, including location, cuisine type, budget, dietary preferences, and more.
 
 ---
 
-## 🔍 Funcionalidades
+## 🎯 Objective
 
-O sistema permite filtrar restaurantes pelos seguintes parâmetros:
-
-- 🌍 **País**
-- 🏙️ **Cidade**
-- 🍝 **Tipo de cozinha** (ex: portuguese, italian)
-- 💸 **Preço máximo** (1 = muito barato, 4 = muito caro)
-- 🚚 **Entrega** (`sim`, `nao`, `qualquer`)
-- 📦 **Takeaway** (`sim`, `nao`, `qualquer`)
-- 🌞 **Esplanada** (`sim`, `nao`, `qualquer`)
-- 🥗 **Dieta** (`vegano`, `vegetariano`, `sem_gluten`, `nenhuma`)
-- 🍳 **Refeição** (`breakfast`, `lunch`, `dinner`)
-- 📆 **Dia aberto** (dia da semana ou `"todos"`)
-- ⭐ **Avaliação mínima** (ex: `4.0`)
-- 🏅 **Prémios** (`sim`, `nao`)
-- 📍 **Localização do utilizador** (latitude e longitude)
-
-O sistema calcula a **distância entre o utilizador e o restaurante** para recomendar o mais próximo que cumpra os critérios definidos.
+To enable **intelligent restaurant search** based on user-defined criteria, returning the **closest restaurant** that satisfies all selected conditions.
 
 ---
 
-## 🧱 Estrutura do Projeto
+## 🔍 Features
 
-- `perito.pl`: Contém a lógica do sistema pericial e interface de interação com o utilizador.
-- `restaurantes.pl`: Base de conhecimento com os dados dos restaurantes.
+The system allows filtering restaurants by the following parameters:
 
-### 📦 Exemplo de entrada na base de conhecimento:
+- 🌍 **Country**
+- 🏙️ **City**
+- 🍝 **Cuisine Type** (e.g., `portuguese`, `italian`)
+- 💸 **Maximum Price** (`1 = very cheap` ... `4 = very expensive`)
+- 🚚 **Delivery** (`yes`, `no`, `any`)
+- 📦 **Takeaway** (`yes`, `no`, `any`)
+- 🌞 **Terrace** (`yes`, `no`, `any`)
+- 🥗 **Diet** (`vegan`, `vegetarian`, `gluten_free`, `none`)
+- 🍳 **Meal** (`breakfast`, `lunch`, `dinner`)
+- 📆 **Open Day** (`mon`, `tue`, ..., or `all`)
+- ⭐ **Minimum Rating** (e.g., `4.0`)
+- 🏅 **Awards** (`yes`, `no`)
+- 📍 **User Location** (latitude and longitude)
+
+The system calculates the **distance between the user and restaurants**, recommending the **closest one** that matches the filters.
+
+---
+
+## 🧱 Project Structure
+
+- `perito.pl`: Contains the expert system logic and user interaction interface.
+- `restaurantes.pl`: Knowledge base with the restaurant data.
+
+### 📦 Example entry in the knowledge base:
 
 ```prolog
-restaurante('manjar_dos_deuses', 'portugal', 'belmonte', ['european', 'portuguese'], ['lunch', 'dinner'], [], 5, 3.5, [], 'nao', 'nao', 'nao', [], 0.0, 0.0).
+restaurante('manjar_dos_deuses', 'portugal', 'belmonte',
+  ['european', 'portuguese'], ['lunch', 'dinner'], [],
+  5, 3.5, [], no, no, no, [], 0.0, 0.0).
 ```
 
 ---
 
-## 💻 Instalação e Execução
+## 💻 Installation & Execution
 
-### 1️⃣ Instalar o SWI-Prolog
+### 1️⃣ Install SWI-Prolog
 
-Baixe e instale a partir do site oficial: [https://www.swi-prolog.org/](https://www.swi-prolog.org/)
+Download and install from: [https://www.swi-prolog.org/](https://www.swi-prolog.org/)
 
-Para VSCode: Instale a extensão para suporte a arquivos `.pl`.
-
----
-
-### 2️⃣ Preparar o Projeto
-
-Coloque os arquivos `perito.pl` e `restaurantes.pl` no mesmo diretório.
+Using VSCode? Install the Prolog extension for `.pl` file support.
 
 ---
 
-### 3️⃣ Executar o Sistema
+### 2️⃣ Prepare the Project
 
-#### Com SWI-Prolog:
+Ensure that both `perito.pl` and `restaurantes.pl` are in the same directory.
+
+---
+
+### 3️⃣ Run the System
+
+#### In SWI-Prolog:
 ```prolog
 ?- consult('perito.pl').
 ?- perito.
 ```
 
-#### Ou via terminal (VSCode):
+#### Or via terminal (VSCode or CLI):
 ```bash
 swipl perito.pl
 ```
 
 ---
 
-## ⚙️ Como Usar
+## ⚙️ How to Use
 
-### Menu inicial:
+### Initial Menu:
 ```
-Sistema Pericial de Restaurantes
-Versão 2025
+Restaurant Expert System
+Version 2025
 
-Comandos disponíveis:
-1 - Carregar Base de Conhecimento
-2 - Procurar Restaurante
-3 - Sair
+Available commands:
+1 - Load Knowledge Base
+2 - Search Restaurant
+3 - Exit
 ```
 
-### 📁 Carregar Base de Conhecimento
+### 📁 Load Knowledge Base:
 ```
 > 1.
-Nome do arquivo da Base de Conhecimento (ex: base_conhecimento.pl):
+Knowledge Base file name (e.g., knowledge_base.pl):
 |: restaurantes.
 ```
 
-### 🔎 Procurar Restaurante
-Exemplo de entrada:
+### 🔎 Search for a Restaurant:
+Example session:
 ```
 > 2.
-Qual o país? |: portugal
-Qual a cidade? |: belmonte
-Tipo de cozinha? |: portuguese
-Preço máximo (1-4)? |: 5
-Quer entrega? (sim/nao/qualquer) |: nao
-Quer takeaway? (sim/nao/qualquer) |: nao
-Quer esplanada? (sim/nao/qualquer) |: nao
-Dieta (vegano, vegetariano, sem_gluten, nenhuma)? |: nenhuma
-Refeição? |: dinner
-Dia? (mon, tue... ou todos) |: todos
-Avaliação mínima? |: 3.5
-Restaurantes com prémios? (sim/nao) |: nao
-Latitude? |: 2
-Longitude? |: 2
+Which country? |: portugal
+Which city? |: belmonte
+Cuisine type? |: portuguese
+Maximum price (1-4)? |: 5
+Want delivery? (yes/no/any) |: no
+Want takeaway? (yes/no/any) |: no
+Want a terrace? (yes/no/any) |: no
+Diet (vegan, vegetarian, gluten_free, none)? |: none
+Meal? |: dinner
+Open day? (mon, tue... or all) |: all
+Minimum rating? |: 3.5
+Restaurants with awards? (yes/no) |: no
+Your latitude? |: 2
+Your longitude? |: 2
 ```
 
-### ✅ Resultado Esperado
+### ✅ Expected Output:
 ```
-Distância aproximada (graus): 2.83
-Restaurante recomendado: manjar_dos_deuses
+Approximate distance (degrees): 2.83
+Recommended restaurant: manjar_dos_deuses
 ```
 
 ---
 
-## 👥 Autores
+## 👥 Authors
 
 - **Fábio Horta**
 - **Beatriz Patrício**
 
-Este projeto foi desenvolvido como parte de um exercício universitário da cadeira de Lógica Computacional em Prolog, focando na aplicação de **sistemas periciais** para resolver problemas do mundo real.
+This project was developed as part of a university course in **Computational Logic**, focused on building expert systems using Prolog to solve real-world problems.
 
 ---
 
-## 📄 Licença
+## 📄 License
 
-Este projeto é apenas para fins educacionais. Sinta-se à vontade para estudar, modificar e expandir. 🚀
-
----
+This project is intended for educational purposes only. Feel free to study, modify, and expand it. 🚀
